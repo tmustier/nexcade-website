@@ -62,7 +62,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 3rem;
+            gap: 3.5rem;
             flex-wrap: wrap;
         }
         .investor-logos a {
@@ -74,9 +74,12 @@
             opacity: 1;
         }
         .investor-logos img {
-            height: 32px;
+            height: 28px;
             width: auto;
         }
+        .investor-logos img[alt="MMC Ventures"] { height: 22px; }
+        .investor-logos img[alt="Inovia"] { height: 34px; }
+        .investor-logos img[alt="Entropy"] { height: 44px; filter: invert(1); }
         @media (max-width: 600px) {
             .about-hero h1 { font-size: 2rem; }
         }
