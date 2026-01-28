@@ -10,7 +10,10 @@ website/
 ├── about.html          # About page (mission, investors)
 ├── team.html           # Team page
 ├── css/
-│   └── styles.css      # Shared styles (nav, footer, legal pages)
+│   ├── base.css        # Variables, reset, typography
+│   ├── components.css  # Nav, footer, buttons, mobile menu, legal
+│   └── pages/
+│       └── index.css   # Homepage-specific styles
 ├── img/
 │   ├── team/           # Team headshots
 │   ├── logos/          # Investor logos
@@ -29,7 +32,7 @@ website/
 ## Adding New Pages
 
 1. Copy nav and footer from `_dev/_components.html`
-2. Link `css/styles.css` for shared styles
+2. Link `css/base.css` + `css/components.css` for shared styles
 3. Update legal links to `legal/privacy.html`, `legal/terms.html`, `legal/cookies.html`
 
 ## Deployment
