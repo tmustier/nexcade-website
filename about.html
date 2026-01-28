@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Nexcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific styles */
+        .about-hero {
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+        .about-hero h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .about-hero .lead {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .about-content {
+            padding: 0 0 5rem;
+        }
+        .about-content .container {
+            max-width: 800px;
+        }
+        .about-section {
+            margin-bottom: 4rem;
+        }
+        .about-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        .about-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+        .investors {
+            background: var(--bg-warm);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        .investors h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .investor-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .investor-logos a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+        .investor-logos a:hover {
+            color: var(--text);
+            background: rgba(0,0,0,0.03);
+        }
+        @media (max-width: 600px) {
+            .about-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 32 32" fill="none">
+                    <path d="M22.6 23.3l-1.3 1.9c-.2.3-.6.3-.9 0l-2.5-3.6-2-2.8-2-2.8-2.7-3.9c-.1-.2-.1-.4 0-.6l1.3-1.9c.2-.3.6-.3.9 0l2.5 3.6 2 2.8 2 2.8 2.7 3.9c.1.2.1.4 0 .6z" fill="currentColor"/>
+                    <path d="M32 16c0 5.8-3.2 11.2-8.2 14-4.6 2.6-10.5 2.7-15.2.3l-.1-.1c-.2-.1-.3-.4-.2-.6l1.3-1.9c.2-.2.4-.3.7-.2 3.6 1.8 8 1.7 11.5-.2 6.3-3.1 8.7-11.6 5.2-17.6-.2-.3-.7-.4-.9 0l-2.2 3.2c-.1.2-.1.4 0 .6l2.5 3.6c.1.2.1.4 0 .6l-1.3 1.9-.1.1c-.1.1-.2.2-.4.2-.1 0-.3-.1-.3-.2 0 0 0 0-.1-.1-1.2-1.7-3.2-4.6-4.3-6.2-.1-.1-.1-.2-.1-.3 0-.1 0-.2.1-.2 1.2-1.7 3.4-4.9 4.5-6.4l1.5-2.2c.1-.1.2-.2.4-.2.2 0 .3 0 .4.1 3.2 3 5.1 7.3 5.1 11.7z" fill="currentColor"/>
+                    <path d="M23.5 2.5l-1.3 1.8c0 0-.1.1-.1.1-.1.1-.2.2-.4.2 0 0-.1 0-.2 0-4.6-2.3-10.5-1.5-14.2 2-4.4 3.8-5.5 10.7-2.6 15.7.2.3.7.4.9 0l2.3-3.2c.1-.2.1-.4 0-.6l-2.5-3.6c-.1-.2-.1-.4 0-.6l1.3-1.9c.2-.3.6-.3.9 0 1.2 1.7 3.2 4.5 4.3 6.1 0 0 0 .1.1.1 0 .1.1.2.1.3 0 .1 0 .2-.1.2-1.2 1.7-3.4 4.9-4.5 6.4l-1.5 2.2-.1.1c-.1.1-.2.2-.4.2-.1 0-.2 0-.3-.1 0 0 0 0-.1-.1-6-5.3-6.9-15.3-1.9-21.5C8.8.2 17.7-1.8 24.3 1.7c.3.2.4.5.2.8z" fill="currentColor"/>
+                </svg>
+                Nexcade
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="index.html#demo" class="btn btn-primary">Book a demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>We spent four years watching forwarders re-key data that already existed.</h1>
+                <p class="lead">Now we're fixing it.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-section">
+                    <h2>The problem we saw</h2>
+                    <p>At Sedna, we built email tools for supply chain operators. We gave them back an hour a day. But we kept seeing the same thing: pricing teams manually copying data from emails into spreadsheets, cross-referencing rate cards, chasing suppliers across time zones, and building quotes line by line.</p>
+                    <p>The data was there. It was just trapped—in inboxes, in spreadsheets, in people's heads. And the tools that existed were either too broad to go deep on quoting, or too rigid to handle the chaos of real freight forwarding.</p>
+                </div>
+
+                <div class="about-section">
+                    <h2>Why now</h2>
+                    <p>Pre-2023, automating this kind of work was uneconomic. Every supplier had different formats. Every customer had different requirements. Every lane had its quirks. You'd need custom extraction modules for each one—the math didn't work.</p>
+                    <p>LLMs changed that. Not because they're magic, but because they can handle the messiness that ruled out automation before. Unstructured emails. Inconsistent rate sheets. The fuzzy edges that humans navigate without thinking.</p>
+                    <p>We founded Nexcade in early 2025 to build what's now possible.</p>
+                </div>
+
+                <div class="about-section">
+                    <h2>What we believe</h2>
+                    <p>Freight forwarding is a data business that doesn't know it yet. Forwarders sit on years of pricing history, supplier relationships, and customer preferences—but it's scattered and inaccessible.</p>
+                    <p>We think the companies that capture and use their data will win. Not by replacing their teams, but by giving them tools that match the complexity of the work.</p>
+                    <p>We're starting with quoting because it's high-value, high-frequency, and close to the money. But quoting is just the wedge.</p>
+                </div>
+
+                <div class="investors">
+                    <h3>Backed by</h3>
+                    <div class="investor-logos">
+                        <a href="https://www.connectventures.co/" target="_blank">Connect Ventures</a>
+                        <a href="https://www.mmcventures.com/" target="_blank">MMC Ventures</a>
+                        <a href="https://www.inovia.vc/" target="_blank">Inovia</a>
+                        <a href="https://www.entropy.vc/" target="_blank">Entropy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none" width="22" height="22">
+                            <path d="M22.6 23.3l-1.3 1.9c-.2.3-.6.3-.9 0l-2.5-3.6-2-2.8-2-2.8-2.7-3.9c-.1-.2-.1-.4 0-.6l1.3-1.9c.2-.3.6-.3.9 0l2.5 3.6 2 2.8 2 2.8 2.7 3.9c.1.2.1.4 0 .6z" fill="currentColor"/>
+                            <path d="M32 16c0 5.8-3.2 11.2-8.2 14-4.6 2.6-10.5 2.7-15.2.3l-.1-.1c-.2-.1-.3-.4-.2-.6l1.3-1.9c.2-.2.4-.3.7-.2 3.6 1.8 8 1.7 11.5-.2 6.3-3.1 8.7-11.6 5.2-17.6-.2-.3-.7-.4-.9 0l-2.2 3.2c-.1.2-.1.4 0 .6l2.5 3.6c.1.2.1.4 0 .6l-1.3 1.9-.1.1c-.1.1-.2.2-.4.2-.1 0-.3-.1-.3-.2 0 0 0 0-.1-.1-1.2-1.7-3.2-4.6-4.3-6.2-.1-.1-.1-.2-.1-.3 0-.1 0-.2.1-.2 1.2-1.7 3.4-4.9 4.5-6.4l1.5-2.2c.1-.1.2-.2.4-.2.2 0 .3 0 .4.1 3.2 3 5.1 7.3 5.1 11.7z" fill="currentColor"/>
+                            <path d="M23.5 2.5l-1.3 1.8c0 0-.1.1-.1.1-.1.1-.2.2-.4.2 0 0-.1 0-.2 0-4.6-2.3-10.5-1.5-14.2 2-4.4 3.8-5.5 10.7-2.6 15.7.2.3.7.4.9 0l2.3-3.2c.1-.2.1-.4 0-.6l-2.5-3.6c-.1-.2-.1-.4 0-.6l1.3-1.9c.2-.3.6-.3.9 0 1.2 1.7 3.2 4.5 4.3 6.1 0 0 0 .1.1.1 0 .1.1.2.1.3 0 .1 0 .2-.1.2-1.2 1.7-3.4 4.9-4.5 6.4l-1.5 2.2-.1.1c-.1.1-.2.2-.4.2-.1 0-.2 0-.3-.1 0 0 0 0-.1-.1-6-5.3-6.9-15.3-1.9-21.5C8.8.2 17.7-1.8 24.3 1.7c.3.2.4.5.2.8z" fill="currentColor"/>
+                        </svg>
+                        Nexcade
+                    </a>
+                    <p>AI quoting for freight forwarders.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="index.html">Quoting</a></li>
+                            <li><a href="index.html">Booking</a></li>
+                            <li><a href="index.html">Procurement</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="mailto:careers@nexcade.ai">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:hello@nexcade.ai">hello@nexcade.ai</a></li>
+                            <li><a href="https://linkedin.com/company/nexcade" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Nexcade AI Ltd</span>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="terms-of-use.html">Terms</a>
+                    <a href="cookies-policy.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
