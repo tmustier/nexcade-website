@@ -1,12 +1,14 @@
 /* Navigation */
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     background: rgba(249, 248, 246, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     padding: 1rem 0;
-    z-index: 100;
+    z-index: 200;
 }
 
 .nav-inner {

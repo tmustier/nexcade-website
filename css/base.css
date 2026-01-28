@@ -12,6 +12,7 @@
     --red: #b42318;
     --red-bg: #fef3f2;
     --border: #e5e5e2;
+    --nav-height: 72px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,6 +23,7 @@ body {
     color: var(--text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    padding-top: var(--nav-height);
 }
 
 h1, h2, h3, h4 {
