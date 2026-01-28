@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
         /* Page-specific: narrower container for legal text */
         .legal-content .container { max-width: 800px; }
@@ -16,7 +16,7 @@
 <body>
     <nav>
         <div class="container nav-inner">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <svg viewBox="0 0 32 32" fill="none">
                     <path d="M22.6 23.3l-1.3 1.9c-.2.3-.6.3-.9 0l-2.5-3.6-2-2.8-2-2.8-2.7-3.9c-.1-.2-.1-.4 0-.6l1.3-1.9c.2-.3.6-.3.9 0l2.5 3.6 2 2.8 2 2.8 2.7 3.9c.1.2.1.4 0 .6z" fill="currentColor"/>
                     <path d="M32 16c0 5.8-3.2 11.2-8.2 14-4.6 2.6-10.5 2.7-15.2.3l-.1-.1c-.2-.1-.3-.4-.2-.6l1.3-1.9c.2-.2.4-.3.7-.2 3.6 1.8 8 1.7 11.5-.2 6.3-3.1 8.7-11.6 5.2-17.6-.2-.3-.7-.4-.9 0l-2.2 3.2c-.1.2-.1.4 0 .6l2.5 3.6c.1.2.1.4 0 .6l-1.3 1.9-.1.1c-.1.1-.2.2-.4.2-.1 0-.3-.1-.3-.2 0 0 0 0-.1-.1-1.2-1.7-3.2-4.6-4.3-6.2-.1-.1-.1-.2-.1-.3 0-.1 0-.2.1-.2 1.2-1.7 3.4-4.9 4.5-6.4l1.5-2.2c.1-.1.2-.2.4-.2.2 0 .3 0 .4.1 3.2 3 5.1 7.3 5.1 11.7z" fill="currentColor"/>
@@ -25,12 +25,23 @@
                 Nexcade
             </a>
             <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="team.html">Team</a>
-                <a href="index.html#demo" class="btn btn-primary">Book a demo</a>
+                <a href="../about.html">About</a>
+                <a href="../team.html">Team</a>
+                <a href="../index.html#demo" class="btn btn-primary">Book a demo</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="../about.html">About</a>
+                <a href="../team.html">Team</a>
+                <a href="../index.html#demo" class="btn btn-primary">Book a demo</a>
             </div>
         </div>
     </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <main>
         <section class="legal-hero">
@@ -44,7 +55,7 @@
             <div class="container">
                 <p>This website ("Site") is operated by Nexcade Ltd, company registration number 16170540, whose registered office is 8 Walnut Tree Walk, London, England, SE11 6EF ("Nexcade", "we", "us" or "our"), and we are the owner or licensee of all rights to its content. Nexcade Ltd reserves the right to change the terms, conditions and notices under which these Sites are offered at any time. Please check these terms and conditions regularly for any changes as your continued use of these Sites means that you accept any changes. These terms were most recently updated on 1 January 2026.</p>
 
-                <p>For a more detailed explanation of how we will collect, use and store information relating to you, and our commitment to protecting your privacy, please see our <a href="privacy-policy.html">Privacy Policy</a>, which includes information on how we use cookies on the Sites.</p>
+                <p>For a more detailed explanation of how we will collect, use and store information relating to you, and our commitment to protecting your privacy, please see our <a href="privacy.html">Privacy Policy</a>, which includes information on how we use cookies on the Sites.</p>
 
                 <h2>Use of the Sites</h2>
                 <p>You agree (i) not to use the Sites to upload or distribute in any way files that contain viruses, bugs, corrupted files, or any other similar software or programs that may damage the operation of computer hardware or software; (ii) not to interfere or disrupt the Sites or any networks connected to the Sites; (iii) not to use any device, software or routine or attempt to interfere with the proper functioning of the Sites or any transactions being offered at the Sites; (iv) not to take any action that imposes an unreasonable or disproportionately large load on Nexcade Ltd's infrastructure; (v) not to use the Sites to collect or harvest personal information, including, without limitation, financial information, about other participants at the Sites; (vi) not to impersonate any person or entity or falsely state or otherwise misrepresent your affiliation with a person or entity; and (vii) not to post any misleading, fraudulent, defamatory, obscene or otherwise illegal information on the Sites. You agree not to use the services available at the Sites for illegal purposes, and to comply with all regulations, policies, and procedures of networks connected to the Sites.</p>
@@ -67,10 +78,10 @@
                 <p>In particular, we won't be liable for loss of business, profits, sales or revenue, loss of use or of data, interruption of business, loss of goodwill or reputation, indirect, or consequential damages of any kind even if we've been advised of the possibility of such loss and whether or not we had any knowledge, actual or constructive, that such damages might be incurred.</p>
 
                 <h2>Monitoring</h2>
-                <p>You acknowledge that Nexcade Ltd or its designees reserves the right to, and may from time to time, monitor any and all activity or information transmitted or received through the Sites. During monitoring, information may be examined, recorded, copied, and used for authorised purposes. Use of the Sites, authorised or unauthorised, constitutes consent to such monitoring. For more information, please see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                <p>You acknowledge that Nexcade Ltd or its designees reserves the right to, and may from time to time, monitor any and all activity or information transmitted or received through the Sites. During monitoring, information may be examined, recorded, copied, and used for authorised purposes. Use of the Sites, authorised or unauthorised, constitutes consent to such monitoring. For more information, please see our <a href="privacy.html">Privacy Policy</a>.</p>
 
                 <h2>Data Supplied by You</h2>
-                <p>In order to participate in the services offered at the Sites, you must provide certain current, complete, and accurate information about you as prompted to do so by our online forms. We process any personal information that you supply to us via our online forms in line with our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                <p>In order to participate in the services offered at the Sites, you must provide certain current, complete, and accurate information about you as prompted to do so by our online forms. We process any personal information that you supply to us via our online forms in line with our <a href="privacy.html">Privacy Policy</a>.</p>
 
                 <h2>Access</h2>
                 <p>You agree that Nexcade Ltd may, in its sole discretion, deny you access to the Sites and disable any username and password associated with you for any reason, including, without limitation, if Nexcade Ltd believes in its sole discretion that you have violated or acted inconsistently with the letter or spirit of these terms. Nexcade Ltd reserves the right at any time and from time to time to modify or discontinue, temporarily or permanently, the services offered under the Sites (or any part thereof) with or without notice. You agree that Nexcade Ltd shall not be liable to you or to any third party for any modification, suspension or discontinuance of the services offered under the Sites.</p>
@@ -95,12 +106,29 @@
             <div class="footer-bottom">
                 <span>© 2026 Nexcade AI Ltd</span>
                 <div class="footer-legal">
-                    <a href="privacy-policy.html">Privacy</a>
-                    <a href="terms-of-use.html">Terms</a>
-                    <a href="cookies-policy.html">Cookies</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="cookies.html">Cookies</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            mobileOverlay.classList.toggle('show');
+            mobileOverlay.style.display = mobileOverlay.classList.contains('show') ? 'block' : 'none';
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+        hamburger.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => { if (mobileMenu.classList.contains('open')) toggleMobileMenu(); });
+        });
+    </script>
 </body>
 </html>

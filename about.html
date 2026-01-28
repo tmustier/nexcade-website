@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
         /* Page-specific styles */
         .about-hero {
@@ -81,7 +81,16 @@
         .investor-logos img[alt="Inovia"] { height: 34px; }
         .investor-logos img[alt="Entropy"] { height: 44px; filter: invert(1); }
         @media (max-width: 600px) {
-            .about-hero h1 { font-size: 2rem; }
+            .about-hero { padding: 3rem 0 2rem; }
+            .about-hero h1 { font-size: 1.65rem; line-height: 1.3; }
+            .about-hero .lead { font-size: 1.05rem; }
+            .about-content { padding: 0 0 3rem; }
+            .about-section { margin-bottom: 2.5rem; }
+            .about-section h2 { font-size: 1.35rem; }
+            .about-section p { font-size: 0.95rem; }
+            .investors { padding: 2rem 1.25rem; margin-top: 2rem; }
+            .investors h3 { font-size: 1.1rem; }
+            .investor-logos { gap: 2rem 2.5rem; }
         }
     </style>
 </head>
@@ -101,8 +110,21 @@
                 <a href="team.html">Team</a>
                 <a href="index.html#demo" class="btn btn-primary">Book a demo</a>
             </div>
+            <div class="nav-right">
+                <a href="index.html#demo" class="btn btn-primary mobile-cta">Book a demo</a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+            </div>
         </div>
     </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <main>
         <section class="about-hero">
@@ -137,10 +159,10 @@
                 <div class="investors">
                     <h3>Backed by</h3>
                     <div class="investor-logos">
-                        <a href="https://www.connectventures.co/" target="_blank"><img src="logo-connect.gif" alt="Connect Ventures"></a>
-                        <a href="https://www.mmcventures.com/" target="_blank"><img src="logo-mmc.png" alt="MMC Ventures"></a>
-                        <a href="https://www.inovia.vc/" target="_blank"><img src="logo-inovia.png" alt="Inovia"></a>
-                        <a href="https://www.entropy.vc/" target="_blank"><img src="logo-entropy.png" alt="Entropy"></a>
+                        <a href="https://www.connectventures.co/" target="_blank"><img src="img/logos/logo-connect.gif" alt="Connect Ventures"></a>
+                        <a href="https://www.mmcventures.com/" target="_blank"><img src="img/logos/logo-mmc.png" alt="MMC Ventures"></a>
+                        <a href="https://www.inovia.vc/" target="_blank"><img src="img/logos/logo-inovia.png" alt="Inovia"></a>
+                        <a href="https://www.entropy.vc/" target="_blank"><img src="img/logos/logo-entropy.png" alt="Entropy"></a>
                     </div>
                 </div>
             </div>
@@ -166,8 +188,8 @@
                         <h4>Product</h4>
                         <ul>
                             <li><a href="index.html">Quoting</a></li>
-                            <li><a href="index.html">Booking</a></li>
-                            <li><a href="index.html">Procurement</a></li>
+                            <li><span class="coming-soon">Booking</span></li>
+                            <li><span class="coming-soon">Procurement</span></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -190,12 +212,29 @@
             <div class="footer-bottom">
                 <span>© 2026 Nexcade AI Ltd</span>
                 <div class="footer-legal">
-                    <a href="privacy-policy.html">Privacy</a>
-                    <a href="terms-of-use.html">Terms</a>
-                    <a href="cookies-policy.html">Cookies</a>
+                    <a href="legal/privacy.html">Privacy</a>
+                    <a href="legal/terms.html">Terms</a>
+                    <a href="legal/cookies.html">Cookies</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            mobileOverlay.classList.toggle('show');
+            mobileOverlay.style.display = mobileOverlay.classList.contains('show') ? 'block' : 'none';
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+        hamburger.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => { if (mobileMenu.classList.contains('open')) toggleMobileMenu(); });
+        });
+    </script>
 </body>
 </html>
