@@ -69,7 +69,8 @@ nav {
     gap: 0.4rem;
 }
 
-.logo svg { width: 24px; height: 24px; }
+.logo svg,
+.logo img { width: 24px; height: 24px; }
 
 .nav-links {
     display: flex;
