@@ -15,9 +15,13 @@ website/
 │   └── pages/
 │       └── index.css   # Homepage-specific styles
 ├── img/
+│   ├── icons/          # UI icons (SVG)
+│   ├── logos/          # Brand/logo SVGs
 │   ├── team/           # Team headshots
-│   ├── logos/          # Investor logos
 │   └── *.jpg/png       # Other images
+├── js/
+│   ├── mobile-menu.js  # Shared mobile nav behavior
+│   └── cookie-consent.js # Cookie banner + modal logic
 ├── legal/
 │   ├── privacy.html
 │   ├── terms.html
@@ -33,7 +37,8 @@ website/
 
 1. Copy nav and footer from `_dev/_components.html`
 2. Link `css/base.css` + `css/components.css` for shared styles
-3. Update legal links to `legal/privacy.html`, `legal/terms.html`, `legal/cookies.html`
+3. Include `js/mobile-menu.js` before `</body>` if you include the hamburger/mobile menu
+4. Update legal links to `legal/privacy.html`, `legal/terms.html`, `legal/cookies.html`
 
 ## Deployment
 
