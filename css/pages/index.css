@@ -6,11 +6,15 @@
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
+    grid-template-areas:
+        "content mock"
+        "logos logos";
     gap: 4rem;
     align-items: center;
 }
 
 .hero-content {
+    grid-area: content;
     animation: fadeInUp 0.6s ease both;
 }
 
@@ -34,6 +38,7 @@
 
 /* Email Mockup */
 .email-mock {
+    grid-area: mock;
     background: var(--bg-white);
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -179,6 +184,7 @@
 
 /* Logos */
 .logos {
+    grid-area: logos;
     padding: 2.5rem 0;
     border-bottom: 1px solid var(--border);
 }
@@ -935,7 +941,15 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-    .hero-grid,
+    .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "content"
+            "logos"
+            "mock";
+        gap: 2.5rem;
+    }
+
     .exceptions-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
